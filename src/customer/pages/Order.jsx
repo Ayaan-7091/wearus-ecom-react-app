@@ -17,13 +17,13 @@ export default function Order(){
     ]
 
     const dispatch = useDispatch()
-    const {order} = useSelector(store=>store)
+    const {order,auth} = useSelector(store=>store)
     console.log("new data",order.orders)
    
 
     useEffect(() => {
         dispatch(getUserOrders())
-    }, []);
+    }, [auth.user_data]);
 
     return(
         <div className="px-5 lg:px-20">
