@@ -23,7 +23,7 @@ export default function Order(){
 
     useEffect(() => {
         dispatch(getUserOrders())
-    }, [auth.user_data]);
+    }, []);
 
     return(
         <div className="px-5 lg:px-20">
